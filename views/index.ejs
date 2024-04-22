@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AltSchool - Blogs API</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				height: 100vh;
+				max-width: 100%;
+				padding: 8px;
+				font-family: "Courier New", Courier, monospace;
+			}
+
+			.row {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding: 4px 8px;
+				margin: 6px 0;
+				max-width: 900px;
+
+				& div {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 16px;
+				}
+			}
+
+			.POST {
+				color: green;
+			}
+
+			.POST_REQ {
+				border: 1px solid green;
+			}
+
+			.DELETE {
+				color: red;
+			}
+
+			.DELETE_REQ {
+				border: 1px solid red;
+			}
+
+			.GET {
+				color: brown;
+			}
+
+			.GET_REQ {
+				border: 1px solid brown;
+			}
+
+			.PATCH {
+				color: chocolate;
+			}
+
+			.PATCH_REQ {
+				border: 1px solid chocolate;
+			}
+		</style>
+	</head>
+	<body>
+		<header
+			style="
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			">
+			<h1>AltSchool Exam - Blogs App</h1>
+			<section>
+				<li style="list-style-type: none">
+					<a
+						target="_blank"
+						href="https://www.linkedin.com/in/agada-gabriel-530104129/"
+						>LinkedIn</a
+					>
+				</li>
+				<li style="list-style-type: none">
+					<a target="_blank" href="https://github.com/raizo07"
+						>Github</a
+					>
+				</li>
+			</section>
+		</header>
+
+		<div style="margin-top: 8px">
+			<h2>Routes</h2>
+			<div style="padding: 0 8px">
+				<h3>User</h3>
+				<ul>
+					<li class="row POST_REQ">
+						<div>
+							<span class="POST">POST</span>
+							<strong style="font-weight: 700"
+								>/AUTH/LOGIN</strong
+							>
+						</div>
+						<p>Logs in a User</p>
+					</li>
+					<li class="row POST_REQ">
+						<div>
+							<span class="POST">POST</span>
+							<strong style="font-weight: 700"
+								>/AUTH/REGISTER</strong
+							>
+						</div>
+						<p>Registers a User</p>
+					</li>
+				</ul>
+			</div>
+			<div style="padding: 0 8px">
+				<h3>Blogs</h3>
+				<ul>
+					<li class="row GET_REQ">
+						<div>
+							<span class="GET">GET</span>
+							<strong style="font-weight: 700">/BLOG</strong>
+						</div>
+						<p>List of published Blogs</p>
+					</li>
+					<li class="row POST_REQ">
+						<div>
+							<span class="POST">POST</span>
+							<strong style="font-weight: 700">/BLOG</strong>
+						</div>
+						<p>Create Blog</p>
+					</li>
+					<li class="row PATCH_REQ">
+						<div>
+							<span class="PATCH">PATCH</span>
+							<strong style="font-weight: 700">/BLOG/:id</strong>
+						</div>
+						<p>Update Blog</p>
+					</li>
+					<li class="row DELETE_REQ">
+						<div>
+							<span class="DELETE">DELETE</span>
+							<strong style="font-weight: 700">/BLOG/:id</strong>
+						</div>
+						<p>Delete Blog</p>
+					</li>
+
+					<li class="row GET_REQ">
+						<div>
+							<span class="GET">GET</span>
+							<strong style="font-weight: 700">/BLOG/me</strong>
+						</div>
+						<p>Logged in user's blog list</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
